@@ -3,5 +3,5 @@ title: "Graham Straus"
 ---
 
 
-<img src="files/sunset.jpg" style="width:50%">
+<img src="files/sunset.jpg" style="width:80%">
 
