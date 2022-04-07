@@ -1,0 +1,14 @@
+name: "Graham Straus"
+navbar:
+  title: "Graham Straus"
+  left:
+    - text: "Home"
+      href: index.html
+  right: 
+    - icon: fa-envelope fa-lg
+      href: mailto:<gpstraus@g.ucla.edu>
+    - icon: fa-github fa-lg
+      href: http://github.com/grahamstraus
+output:
+  html_document:
+    theme: darkly
