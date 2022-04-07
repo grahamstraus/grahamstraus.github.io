@@ -10,6 +10,8 @@ title: "Graham Straus"
 
 <link rel="stylesheet" href="styles.css" type="text/css">
 
-<img src="files/sunset.jpg" style="width:80%">
+<img src="files/sunset.jpg" style="width:25%";  margin-right: 20px" align="left">
 
-# A look into [two party competition](https://teitsp-graham-straus.shinyapps.io/party_comp_app/)
+I am a second year PhD student at UCLA. I've been studying two-party competition in the United States. 
+
+Here's a dashboard looking at [two party competition](https://teitsp-graham-straus.shinyapps.io/party_comp_app/) measured in two different ways - by voteshare (1) and state legislature margins of control (2). 
