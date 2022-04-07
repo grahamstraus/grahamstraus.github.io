@@ -2,7 +2,6 @@
 title: "Graham Straus"
 ---
 
-This is John.
 
 <img src="files/sunset.jpg" style="width:50%">
 
