@@ -10,7 +10,7 @@ title: "Graham Straus"
 
 <link rel="stylesheet" href="styles.css" type="text/css">
 
-<img src="files/sunset.jpg" style="width:25%";  margin-right: 20px" align="left">
+<img src="files/sunset.jpg" style="width:25%;  margin-right: 20px" align="left">
 
 I am a second year PhD student at UCLA. I've been studying two-party competition in the United States. 
 
