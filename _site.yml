@@ -4,6 +4,8 @@ navbar:
   left:
     - text: "Home"
       href: index.html
+    - text: "Poll Smoothing"
+      href: ps209_final_project.html
   right: 
     - icon: fa-envelope fa-lg
       href: mailto:<gpstraus@g.ucla.edu>
