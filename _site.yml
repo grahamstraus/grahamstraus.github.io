@@ -2,8 +2,6 @@ name: "Graham Straus"
 navbar:
   title: "Graham Straus"
   left:
-    - text: "Home"
-      href: index.html
     - text: "CV"
       href: cv.html
   right: 
