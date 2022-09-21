@@ -12,6 +12,6 @@ title: "Graham Straus"
 
 <img src="files/sunset.jpg" style="width:25%;  margin-right: 20px" align="left">
 
-I am a second year political science PhD student at UCLA. 
+I am a third year political science PhD student at UCLA. 
 
 Here's a dashboard looking at [two-party competition](https://teitsp-graham-straus.shinyapps.io/party_comp_app/) measured in two different ways - by voteshare (1) and state legislature margins of control (2). 
