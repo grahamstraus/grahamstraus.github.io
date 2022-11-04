@@ -1,0 +1,50 @@
+---
+output:
+  html_document:
+    df_print: paged
+---
+
+### [DALL.E](https://openai.com/dall-e-2/)
+Openai is known for the large language model GPT-3 which can do almost any natural language task. Recently they have released an API to generate images from text. I entered in a few basic political prompts and below are the results. I have the prompts as headings and the images they made right below.
+
+Here is a code chunk showing how I generated these images. 
+
+```{python, eval = F}
+response = openai.Image.create(
+  prompt= "Polarized politics",
+  n=1,
+  size="1024x1024"
+)
+image_url = response['data'][0]['url']
+
+print(image_url)
+
+```
+
+### A Republican Family Sitting Down for Dinner
+![](a republican family sitting down for dinner.png){width = 150px}
+
+### A Democratic Family Sitting Down for Dinner
+![](a democratic family sitting down for dinner.png)
+
+### A Republican Mayor
+![](Republican Mayor.png)
+
+### A Democratic Mayor 
+![](Democratic Mayor.png)
+
+
+### Political Scientist
+![](political scientist.png)
+
+### Gavin Newsom Riding a Horse in the Desert
+![](gavin newsom riding a horse in the desert.png)
+
+### Democratic Politican
+![](Republican Politician.png)
+
+### Republican Politican 
+![](Democratic Politician .png)
+
+
+
