@@ -22,7 +22,7 @@ print(image_url)
 ```
 
 ### A Republican Family Sitting Down for Dinner
-![](a republican family sitting down for dinner.png){width = 150px}
+![](a republican family sitting down for dinner.png)
 
 ### A Democratic Family Sitting Down for Dinner
 ![](a democratic family sitting down for dinner.png)
