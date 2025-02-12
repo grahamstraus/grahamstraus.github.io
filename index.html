@@ -1,363 +1,102 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-
-
-
-
-<title>Graham Straus</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
-
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
-
-
-
-
-
-
-<link rel="stylesheet" href="styles.css" type="text/css" />
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-details > summary > p:only-child {
-  display: inline;
-}
-pre code {
-  padding: 0;
-}
-</style>
-
-
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-
-
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graham Straus</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Ensure all abstracts are initially hidden
+            document.querySelectorAll(".abstract-text").forEach(el => el.style.display = "none");
+        });
+    
+        function toggleAbstract(id) {
+            let abstract = document.getElementById(id);
+            if (abstract.style.display === "none" || abstract.style.display === "") {
+                abstract.style.display = "block"; // Show abstract
+            } else {
+                abstract.style.display = "none"; // Hide abstract
+            }
+        }
+    </script>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MXH80B66GC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MXH80B66GC');
-</script>
-
 <body>
+    <header>
+        <h1>Graham Straus</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="headshot-container">
+            <img src="headshot.jpeg" alt="headshot" class="headshot">
+        </div>
+        <div class="content">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>I am a PhD candidate in the department of Political Science and an MS student in Statistics at the University of California, Los Angeles. My research interests are within voting behavior. Specifically, I work on administrative voting data, causal inference, local politics, and elections. In my dissertation project I am studying how salary changes affect voting behavior when we hold the individual fixed. Recent projects include studying the occupational history of city councilmembers and studying persuasive public health messaging during the pandemic. I set up and manage the UCLA national voter file. It is hosted on <a href="https://redivis.com/datasets/4r1c-d6j182y87" target="_blank">Redivis</a> where UCLA affiliated students and professors can access it.</p>
+            </section>
 
-
-<div class="container-fluid main-container">
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Graham Straus</a>
+            <section id="research">
+                <h2>Research</h2>
+                <ul class="research-list">
+                    <li>
+                        <span class="citation">Straus, G. (2025). "The Economic Background of City Councilmembers." <em>Urban Affairs Review</em>.</span>
+                        <button class="abstract-button" onclick="toggleAbstract('abstract2')">Abstract</button>
+                        <a href="https://journals.sagepub.com/doi/10.1177/10780874251315148" class="abstract-button">Link to Paper</a>
+                        <p id="abstract2" class="abstract-text">Is local politics shaped by groups and interests or party and ideology? Classic literature posits that local politics differs from national politics and centers on groups and interests rather than ideology, especially in settings with nonpartisan elections. A separate literature casts doubt on this, finding a connection between partisan voting, local ideology, and policy mimicking the federal level and without reference to groups and interests. In this paper, I use a large original dataset on the professional backgrounds of city councilors to provide a link between the evidence for both theories. I look at city council candidates from all 477 cities in California between 1996 and 2021, observing both candidates' career histories through their ballot designations and party affiliations through their public voter records. I find that liberal cities have more career politicians, non-profit workers, and service-based professionals running for and holding office, while conservative cities have more military and law enforcement workers and business types running for and holding office. Career politicians, non-profit workers, and service-based professionals are more likely to be registered as Democrats and military and law enforcement workers and business types are more likely to be registered Republicans. In this case group membership and party affiliation are tightly coupled.</p>
+                    </li>
+                    <li>
+                        <span class="citation">Straus, G. (2022). "Two-Party Competition in the United States: Reversed Growth Trends." <em>Party Politics</em>.</span>
+                        <button class="abstract-button" onclick="toggleAbstract('abstract1')">Abstract</button>
+                        <a href="https://journals.sagepub.com/doi/full/10.1177/13540688221109780" class="abstract-button">Link to Paper</a>
+                        <p id="abstract1" class="abstract-text">Does two-party competition in the United States lead to improved human welfare spending? The debate over the merits of competition has gained traction yet again in the study of American politics. Gerald Gamm and Thad Kousser suggest that from 1880 to 1980 two-party competition led to desirable outcomes like increased education, transportation, and health spending. The modern panel data presented here suggest the spending effects do not persist beyond 1980 through 2020, and also, there is a negative effect on economic growth stemming from state-level partisan competition. The reversal of the historical trend is justified by predictions from existing formal models: at particularly high levels of baseline political competition, the effect of additional competition on growth is ambiguous.</p>
+                    </li>
+                </ul>
+                <div class="wip-list">   
+                    <h3>Works in Progress</h3>
+                    <ul>
+                        <li>Endorsements vs. Information: Experimental Evidence of Backlash and Parallel Persuasion during the COVID-19 Public Health Crisis<small style="color: grey;"> with Ryan Baxter-King, Alexander Coppock, and Lynn Vavreck</small></li>
+                        <li>The Effect of Salary on Turnout: Evidence from Administrative Records in the United States</li>
+                        <li>Local Politics and Municipal Spending in Small and Large Cities <small style="color: grey;">with Grant Baldwin and Adam Dynes</small></li>
+                        <li>Individual-Level Health and Politics Project <small style="color: grey;">with Arash Naeim, Dan Thompson, and Lynn Vavreck</small></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="teaching">
+                <h2>Teaching</h2>
+                <div class="teaching-container">
+                    <div class="teaching-list">
+                        <h3>Primary Instructor</h3>
+                        <ul>
+                            <li>PS 40: Introduction to American Politics (Summer 2023, 2025)</li>
+                            <li>CW 60: A History of Political Data Analytics (Spring 2025)</li>
+                            <li>UCLA Political Science Department Math Camp (Graduate; Summer 2024, 2025)</li>
+                        </ul>
+                    </div>
+                    <div class="teaching-list">
+                        <h3>Teaching Assistant</h3>
+                        <ul>
+                            <li>PS 40: Introduction to American Politics (Fall 2022, Winter 2023)</li>
+                            <li>PS 6: Introduction to Data Analysis (Spring 2023)</li>
+                            <li>PS 200A: Probability for Social Science (Graduate; Fall 2024, 2025)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="cv.html">CV</a>
-</li>
-<li>
-  <a href="Research.html">Research</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="mailto:&lt;gpstraus@g.ucla.edu&gt;">
-    <span class="fa fa-envelope fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="http://github.com/grahamstraus">
-    <span class="fa fa-github fa-lg"></span>
-     
-  </a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div id="header">
-
-
-
-<h1 class="title toc-ignore">Graham Straus</h1>
-
-</div>
-
-
-<style>
-  .title{
-    display: none;
-  }
-</style>
-<p><link rel="stylesheet" href="styles.css" type="text/css"></p>
-<p><img alt = "personal headshot" src="files/IMG_4206.jpeg" style="width:25%;  margin-right: 20px" align="left"></p>
-<p><font size="+2">I am a political science PhD candidate at UCLA focusing on
-American political behavior and methodology. I am also pursuing
-a masters in statistics. </font></p>
-       
-<br>
-
-<p><font size="+2"> In my dissertation project I am studying how within-individual salary changes affect voting behavior. 
-Recent projects include studying the occupational history of city councilmembers and studying persuasive public health messaging during the pandemic. 
-I set up and manage the UCLA national voter file. It is hosted on
-<a href="https://redivis.com/datasets/4r1c-d6j182y87">Redivis</a> where
-UCLA affiliated students and professors can access it.</font></p>
-
-<br>
-<br>
-<br>
-
-
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
-  });
-});
-</script>
-
-<!-- code folding -->
-
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-
+    
+    <footer>
+        <p><a href = "https://polisci.ucla.edu">UCLA Political Science</a> | <a href = "https://www.dropbox.com/scl/fi/wszy269ex66bm68bsaoeq/Straus_CV.pdf?rlkey=nn8gojh1m5qlbk478weoj1p3p&st=1lbuio0r&dl=0">CV</a> | <a href="mailto:gpstraus@g.ucla.edu" class="contact-button">Contact</a></p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,201 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(90deg, #2774AE, #FFD100);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    font-size: 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+h1 {
+    font-size: 1.7em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(90deg, #FFD100, #2774AE);
+    color: white;
+    margin-top: 20px;
+}
+
+/* Container for content and headshot */
+.container  {
+    display: flex;
+    flex-direction: row;
+    max-width: 1400px;  /* Limits width */
+    margin: 20px auto; /* Centers content horizontally */
+    padding: 0 20px;
+}
+
+/* Headshot container */
+.headshot-container {
+    display: flex;
+    margin-top: 60px;
+    margin-right: 40px;
+    /*margin-left: 100px; */
+}
+
+/* Styling the headshot */
+.headshot {
+    width: 150px;  /* Adjust image size */
+    height: 150px;  /* Ensure it's the right size */
+    border-radius: 50%;  /* Circular image */
+    object-fit: cover;  /* Ensures the image fills the circle */
+}
+
+/* Content section */
+.content {
+    flex: 1;
+}
+
+/* Margins for sections */
+#about, #research, #teaching {
+    margin-top: 20px;
+}
+
+/* Mobile view: Stack the headshot below content */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headshot-container {
+        margin-right: 0;
+        margin-bottom: 20px; /* Space between headshot and content */
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+a {
+    color: inherit;  /* Ensures the link retains the color of its parent element */
+    text-decoration: underline;
+}
+
+a:hover, a:focus, a:active {
+    color: inherit;  /* Prevents color change on hover/focus/active */
+}
+
+.research-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.research-list li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.citation {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.abstract-button {
+    background-color: #2774AE;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.abstract-button:hover {
+    background-color: #2774AE;
+}
+
+.abstract-text {
+    display: none;
+    font-size: 14px;
+    margin-top: 10px;
+    /*background-color: #eef2ff;*/
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.teaching-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.teaching-list {
+    width: 48%;
+}
+
+.teaching-list ul li {
+    margin-bottom: 15px; /* Adjust spacing as needed */
+}
+
+h2 {
+    margin-top: 0;
+    padding-top: 5px; /* Adjust as needed */
+}
+
+.wip-list ul li {
+    margin-bottom: 15px; /* Adjust spacing as needed */
+}
+
+@media screen and (max-width: 768px) {
+    .teaching-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .teaching-list {
+        width: 100%;
+    }
+}
