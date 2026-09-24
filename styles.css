@@ -199,3 +199,11 @@ h2 {
         width: 100%;
     }
 }
+
+.teaching-courses li {
+    margin-bottom: 15px;
+}
+
+.teaching-list h4 {
+    margin-top: 0;
+}
